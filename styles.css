@@ -1,0 +1,21 @@
+/* Das Spielfeld: ein Raster mit 3 Spalten */
+.Memoryfeld {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Eine einzelne Karte */
+.karte {
+    height: 100px;
+    background-color: #3b6ea5;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
