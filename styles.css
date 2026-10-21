@@ -1,4 +1,18 @@
-/* Das Spielfeld: ein Raster mit 3 Spalten */
+/* ---------- Farben und Schrift ---------- */
+
+:root {
+    --farbe-hintergrund: #161a20;
+    --farbe-flaeche: #1f242d;
+    --farbe-text: white;
+    --farbe-akzent: #5fbf8a;
+    --farbe-akzent-dunkel: #2e7d55;
+    --farbe-titel-hell: #8effa0;
+    --farbe-titel-dunkel: #1f9c4f;
+    --schatten: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+    --schrift: "Trebuchet MS", Verdana, sans-serif;
+}
+
 .Memoryfeld {
     display: grid;
     grid-template-columns: repeat(4, 100px);
@@ -7,61 +21,64 @@
     margin-top: 40px;
 }
 
-/* Eine einzelne Karte */
 .karte {
     height: 100px;
-    background-color: #3b6ea5;
-    color: white;
+    background-color: var(--farbe-flaeche);
+    border: 2px solid var(--farbe-akzent);
+    color: var(--farbe-text);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     cursor: pointer;
+    box-shadow: var(--schatten);
 }
 
 .spielen-btn{
-    display: inline-block;          /* damit Breite/Höhe/Padding greifen */
+    display: inline-block;
     padding: 12px 40px;
-    background: linear-gradient(to bottom, #5fbf8a, #2e7d55);
-    color: white;
+    background: linear-gradient(to bottom, var(--farbe-akzent), var(--farbe-akzent-dunkel));
+    color: var(--farbe-text);
+    font-family: var(--schrift);
     font-size: 20px;
     font-weight: bold;
-    text-decoration: none;          /* Link-Unterstrich weg */
-    border-radius: 999px;           /* Pillenform */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    border: none;
+    border-radius: 999px;
+    box-shadow: var(--schatten);
+    cursor: pointer;
 }
 
 .main-index {
     display: flex;
-    flex-direction: column;   /* untereinander statt nebeneinander */
-    align-items: center;      /* waagerecht mittig */
-    gap: 20px;                /* Abstand zwischen den Elementen */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 
 h2 {
-    background: linear-gradient(to bottom, #8effa0, #1f9c4f);
+    background: linear-gradient(to bottom, var(--farbe-titel-hell), var(--farbe-titel-dunkel));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
 body {
-    background-color: #161a20;
-    color: white;             /* alle Texte erben weiß */
-    margin: 0;                /* Standard-Rand des Browsers entfernen */
+    background-color: var(--farbe-hintergrund);
+    color: var(--farbe-text);
+    font-family: var(--schrift);
+    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* main nimmt den ganzen freien Platz ein -> footer wird nach unten geschoben */
 main {
     flex: 1;
 }
 
-/* Nav oben rechts */
 header {
     display: flex;
     justify-content: flex-end;
@@ -73,8 +90,8 @@ nav a {
     position: fixed;
     top: 20px;
     right: 20px;
-    color: white;
-    text-decoration: none;    /* Unterstrich entfernen */
+    color: var(--farbe-text);
+    text-decoration: none;
 }
 
 footer {
@@ -85,7 +102,7 @@ footer {
 
 .regeln {
     max-width: 700px;
-    margin: 0 auto;           /* auto links/rechts = horizontal zentriert */
+    margin: 0 auto;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -97,19 +114,40 @@ footer {
     font-size: 36px;
 }
 
-/* Jede Regel als dunkle Karte */
 .regeln article {
-    background-color: #1f242d;
+    background-color: var(--farbe-flaeche);
     border-radius: 12px;
     padding: 10px 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--schatten);
 }
 
 .regeln h3 {
-    color: #5fbf8a;
+    color: var(--farbe-akzent);
 }
 
 .regeln p,
 .regeln li {
     line-height: 1.6;
+}
+
+/*------Handy-format--*/
+
+@media (max-width: 600px) {
+    .Memoryfeld {
+        grid-template-columns: repeat(4, 70px);
+        gap: 8px;
+    }
+
+    .karte {
+        height: 70px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .regeln article {
+        padding: 5px 15px;
+    }
 }
