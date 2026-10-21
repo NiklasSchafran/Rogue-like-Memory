@@ -1,0 +1,153 @@
+/* ---------- Farben und Schrift ---------- */
+
+:root {
+    --farbe-hintergrund: #161a20;
+    --farbe-flaeche: #1f242d;
+    --farbe-text: white;
+    --farbe-akzent: #5fbf8a;
+    --farbe-akzent-dunkel: #2e7d55;
+    --farbe-titel-hell: #8effa0;
+    --farbe-titel-dunkel: #1f9c4f;
+    --schatten: 0 4px 15px rgba(0, 0, 0, 0.5);
+
+    --schrift: "Trebuchet MS", Verdana, sans-serif;
+}
+
+.Memoryfeld {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.karte {
+    height: 100px;
+    background-color: var(--farbe-flaeche);
+    border: 2px solid var(--farbe-akzent);
+    color: var(--farbe-text);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: var(--schatten);
+}
+
+.spielen-btn{
+    display: inline-block;
+    padding: 12px 40px;
+    background: linear-gradient(to bottom, var(--farbe-akzent), var(--farbe-akzent-dunkel));
+    color: var(--farbe-text);
+    font-family: var(--schrift);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 999px;
+    box-shadow: var(--schatten);
+    cursor: pointer;
+}
+
+.main-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+h2 {
+    background: linear-gradient(to bottom, var(--farbe-titel-hell), var(--farbe-titel-dunkel));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body {
+    background-color: var(--farbe-hintergrund);
+    color: var(--farbe-text);
+    font-family: var(--schrift);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav a {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: var(--farbe-text);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+/* ---------- Regeln-Seite ---------- */
+
+.regeln {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.regeln h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.regeln article {
+    background-color: var(--farbe-flaeche);
+    border-radius: 12px;
+    padding: 10px 25px;
+    box-shadow: var(--schatten);
+}
+
+.regeln h3 {
+    color: var(--farbe-akzent);
+}
+
+.regeln p,
+.regeln li {
+    line-height: 1.6;
+}
+
+/*------Handy-format--*/
+
+@media (max-width: 600px) {
+    .Memoryfeld {
+        grid-template-columns: repeat(4, 70px);
+        gap: 8px;
+    }
+
+    .karte {
+        height: 70px;
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .regeln article {
+        padding: 5px 15px;
+    }
+}
