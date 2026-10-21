@@ -19,3 +19,97 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+.spielen-btn{
+    display: inline-block;          /* damit Breite/Höhe/Padding greifen */
+    padding: 12px 40px;
+    background: linear-gradient(to bottom, #5fbf8a, #2e7d55);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;          /* Link-Unterstrich weg */
+    border-radius: 999px;           /* Pillenform */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.main-index {
+    display: flex;
+    flex-direction: column;   /* untereinander statt nebeneinander */
+    align-items: center;      /* waagerecht mittig */
+    gap: 20px;                /* Abstand zwischen den Elementen */
+}
+
+
+h2 {
+    background: linear-gradient(to bottom, #8effa0, #1f9c4f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body {
+    background-color: #161a20;
+    color: white;             /* alle Texte erben weiß */
+    margin: 0;                /* Standard-Rand des Browsers entfernen */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* main nimmt den ganzen freien Platz ein -> footer wird nach unten geschoben */
+main {
+    flex: 1;
+}
+
+/* Nav oben rechts */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav a {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    text-decoration: none;    /* Unterstrich entfernen */
+}
+
+footer {
+    text-align: center;
+}
+
+/* ---------- Regeln-Seite ---------- */
+
+.regeln {
+    max-width: 700px;
+    margin: 0 auto;           /* auto links/rechts = horizontal zentriert */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.regeln h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Jede Regel als dunkle Karte */
+.regeln article {
+    background-color: #1f242d;
+    border-radius: 12px;
+    padding: 10px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.regeln h3 {
+    color: #5fbf8a;
+}
+
+.regeln p,
+.regeln li {
+    line-height: 1.6;
+}
