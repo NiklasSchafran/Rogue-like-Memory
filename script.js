@@ -17,4 +17,13 @@ ersteKarte.addEventListener("click", function (){
 
 const alleKarten = document.querySelectorAll(".karte");
 console.log(alleKarten.length);   // wie viele sind es?
-alleKarten.forEach(function (karte) { karte.textContent="AH" });
+alleKarten.forEach(function (karte) { 
+    karte.addEventListener("click", function (){
+        console.log("Karte wurde geklickt!")
+        karte.classList.toggle("aufgedeckt");
+        karte.textContent = "🍎";
+    });
+});
+
+const symbols = ["🍎", "🍌", "🍇", "🍒", "🥝", "🍔", "🍕", "🍦"];
+

@@ -151,3 +151,10 @@ footer {
         padding: 5px 15px;
     }
 }
+
+
+/*---js---*/
+.karte.aufgedeckt {
+    background-color: var(--farbe-akzent);
+    color: var(--farbe-hintergrund);
+}
