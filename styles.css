@@ -80,18 +80,30 @@ main {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--farbe-hintergrund);
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 20px;
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a {
-    position: fixed;
-    top: 20px;
-    right: 20px;
     color: var(--farbe-text);
     text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: var(--farbe-akzent);
 }
 
 footer {
@@ -130,6 +142,209 @@ footer {
     line-height: 1.6;
 }
 
+/* ---------- Spiel-Seite ---------- */
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 430px;
+    margin: 20px auto 0;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.status p {
+    margin: 0;
+}
+
+/* ---------- Sammlung ---------- */
+
+.sammlung {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.sammlung-zaehler {
+    color: var(--farbe-akzent);
+}
+
+.sammlung-raster {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.monster-karte {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: var(--farbe-flaeche);
+    border: 2px solid var(--farbe-akzent);
+    border-radius: 8px;
+    box-shadow: var(--schatten);
+    color: var(--farbe-text);
+    text-decoration: none;
+}
+
+a.monster-karte:hover {
+    transform: translateY(-3px);
+}
+
+.monster-bild {
+    font-size: 36px;
+}
+
+.monster-name {
+    font-size: 14px;
+}
+
+.monster-karte.gesperrt {
+    border-color: transparent;
+    opacity: 0.4;
+}
+
+/* ---------- Monster-Detail ---------- */
+
+.monster-seite {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.zurueck {
+    color: var(--farbe-akzent);
+    text-decoration: none;
+}
+
+.monster-detail {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 25px;
+    background-color: var(--farbe-flaeche);
+    border-radius: 12px;
+    box-shadow: var(--schatten);
+}
+
+.monster-detail-bild {
+    flex: 0 0 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    border: 2px solid var(--farbe-akzent);
+    border-radius: 12px;
+}
+
+.monster-detail-text {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.monster-detail-text h2 {
+    margin-top: 0;
+}
+
+.monster-detail-text h3 {
+    color: var(--farbe-akzent);
+}
+
+.monster-info {
+    opacity: 0.7;
+}
+
+/* ---------- Upgrades ---------- */
+
+.upgrades {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.upgrades h2 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.kontostand {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.upgrade {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 20px;
+    background-color: var(--farbe-flaeche);
+    border-radius: 12px;
+    box-shadow: var(--schatten);
+}
+
+.upgrade-icon {
+    font-size: 36px;
+}
+
+.upgrade-text {
+    flex: 1;
+}
+
+.upgrade-text h3 {
+    margin: 0;
+    color: var(--farbe-akzent);
+}
+
+.upgrade-text p {
+    margin: 5px 0;
+}
+
+.stufen {
+    display: flex;
+    gap: 5px;
+}
+
+.stufe {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--farbe-akzent);
+    border-radius: 3px;
+}
+
+.stufe.voll {
+    background-color: var(--farbe-akzent);
+}
+
+.kaufen-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, var(--farbe-akzent), var(--farbe-akzent-dunkel));
+    color: var(--farbe-text);
+    font-family: var(--schrift);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 999px;
+    box-shadow: var(--schatten);
+    cursor: pointer;
+}
+
+.kaufen-btn:disabled {
+    background: var(--farbe-hintergrund);
+    opacity: 0.6;
+    cursor: default;
+}
+
 /*------Handy-format--*/
 
 @media (max-width: 600px) {
@@ -149,5 +364,42 @@ footer {
 
     .regeln article {
         padding: 5px 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .sammlung-raster {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .monster-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .monster-detail-bild {
+        flex-basis: auto;
+        width: 150px;
+        height: 150px;
+        font-size: 80px;
+    }
+
+    .upgrade {
+        flex-wrap: wrap;
+    }
+
+    .upgrade-text {
+        min-width: 180px;
+    }
+
+    .kaufen-btn {
+        margin-left: auto;
     }
 }
