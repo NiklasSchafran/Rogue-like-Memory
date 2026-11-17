@@ -1,9 +1,12 @@
+import { NavLink } from 'react-router'
+
 function Header() {
   return (
     <header>
       <nav>
-        <a href="/">Start</a>
-        <a href="/regeln">Regeln</a>
+        <NavLink to="/">Start</NavLink>
+        <NavLink to="/spiel">Spielen</NavLink>
+        <NavLink to="/regeln">Regeln</NavLink>
       </nav>
     </header>
   )
