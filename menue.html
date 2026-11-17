@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flur · Rouge-like-Memory</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/menue.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Start</a>
+            <a href="spiel.html">Spielen</a>
+            <a href="sammlung.html">Sammlung</a>
+            <a href="upgrades.html">Upgrades</a>
+            <a href="regeln.html">Regeln</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="szene" aria-label="Der Flur">
+            <img class="szene-bild" src="img/flur.png" alt="Ein dunkler Flur: links ein Schreibtisch mit grünem Monitor, in der Mitte ein Gang zu einer Tür, rechts ein verzierter Spiegel.">
+
+            <p class="begruessung">Willkommen, Fremder.</p>
+
+            <a class="hotspot" href="sammlung.html" style="--x: 16%; --y: 53%;">
+                <span class="hotspot-label">Sammlung</span>
+            </a>
+            <a class="hotspot" href="spiel.html" style="--x: 54.7%; --y: 50%;">
+                <span class="hotspot-label">Spielen</span>
+            </a>
+            <a class="hotspot" href="upgrades.html" style="--x: 88%; --y: 40%;">
+                <span class="hotspot-label">Upgrades</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>HTWG Konstanz · Niklas Schafran</p>
+    </footer>
+
+    <div class="ueberblendung"></div>
+</body>
+</html>

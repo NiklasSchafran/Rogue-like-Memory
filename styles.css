@@ -9,6 +9,7 @@
     --farbe-titel-hell: #8effa0;
     --farbe-titel-dunkel: #1f9c4f;
     --schatten: 0 4px 15px rgba(0, 0, 0, 0.5);
+    --farbe-hotspot: #f5d17a;
 
     --schrift: "Trebuchet MS", Verdana, sans-serif;
 }
@@ -345,6 +346,123 @@ a.monster-karte:hover {
     cursor: default;
 }
 
+/* ---------- Menü (Flur) ---------- */
+
+.szene {
+    position: relative;
+    width: min(100% - 40px, (100vh - 140px) * 1672 / 940);
+    aspect-ratio: 1672 / 940;
+    margin: 0 auto;
+}
+
+.szene-bild {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: var(--schatten);
+    image-rendering: pixelated;
+}
+
+.begruessung {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 6px 18px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.hotspot {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--farbe-hotspot) 0 5px, transparent 6px);
+}
+
+.hotspot::before,
+.hotspot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid var(--farbe-hotspot);
+    border-radius: 50%;
+    animation: puls 2s ease-out infinite;
+}
+
+.hotspot::after {
+    animation-delay: 1s;
+}
+
+@keyframes puls {
+    from {
+        transform: scale(0.2);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+.hotspot-label {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translate(-50%, 6px);
+    padding: 5px 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--farbe-hotspot);
+    border-radius: 6px;
+    color: var(--farbe-hotspot);
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+}
+
+.hotspot:hover .hotspot-label,
+.hotspot:focus-visible .hotspot-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.ueberblendung {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.ueberblendung.aktiv {
+    opacity: 1;
+}
+
+@media (hover: none) {
+    .hotspot-label {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hotspot::before,
+    .hotspot::after {
+        animation: none;
+    }
+}
+
 /*------Handy-format--*/
 
 @media (max-width: 600px) {
@@ -401,5 +519,19 @@ a.monster-karte:hover {
 
     .kaufen-btn {
         margin-left: auto;
+    }
+
+    .hotspot {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hotspot-label {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+
+    .begruessung {
+        font-size: 12px;
     }
 }
