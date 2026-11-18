@@ -1,35 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rouge-like-Memory</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html" aria-current="page">Start</a>
-            <a href="spiel.html">Spielen</a>
-            <a href="sammlung.html">Sammlung</a>
-            <a href="upgrades.html">Upgrades</a>
-            <a href="regeln.html">Regeln</a>
-        </nav>
-    </header>
-
-    <main >
-        <section class="main-index">
-            <h2>Rouge-like-Memory</h2>
-            <form class="spielen" action="spiel.html" method="get">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="name" required>
-
-                 <button type="submit" class="spielen-btn">Spielen</button>
-            </form>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <p>HTWG Konstanz · Niklas Schafran</p>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rogue-like-Memory</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

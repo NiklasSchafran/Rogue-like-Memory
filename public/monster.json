@@ -1,0 +1,62 @@
+[
+  {
+    "id": "schleim",
+    "name": "Schleim",
+    "bild": "🟢",
+    "seltenheit": "Gewöhnlich",
+    "fundort": "Level 1",
+    "beschreibung": "Ein zäher, grüner Klumpen, der sich durch die unteren Ebenen des Dungeons schiebt. Allein harmlos, aber selten allein.",
+    "faehigkeit": "Klebrige Spur",
+    "faehigkeitText": "Die erste falsch aufgedeckte Karte in jedem Level bleibt eine Sekunde länger sichtbar.",
+    "freigeschaltet": true
+  },
+  {
+    "id": "fledermaus",
+    "name": "Fledermaus",
+    "bild": "🦇",
+    "seltenheit": "Gewöhnlich",
+    "fundort": "Level 1",
+    "beschreibung": "Flattert unruhig durch die Gänge und orientiert sich am Echo. Sieht schlecht, hört dafür alles.",
+    "faehigkeit": "Echoortung",
+    "faehigkeitText": "Einmal pro Level wird eine zufällige Karte kurz aufgedeckt.",
+    "freigeschaltet": true
+  },
+  {
+    "id": "skelett",
+    "name": "Skelett",
+    "bild": "💀",
+    "seltenheit": "Selten",
+    "fundort": "Level 2",
+    "beschreibung": "Ein klappernder Wächter aus vergessenen Zeiten. Was er einmal gesehen hat, vergisst er nie.",
+    "faehigkeit": "Knochenhart",
+    "faehigkeitText": "Der erste Fehler in jedem Run kostet kein Leben.",
+    "freigeschaltet": true
+  },
+  {
+    "id": "geist",
+    "name": "Geist",
+    "bild": "👻",
+    "seltenheit": "Selten",
+    "fundort": "Level 3",
+    "beschreibung": "Schwebt durch Wände und taucht auf, wenn man ihn am wenigsten erwartet.",
+    "faehigkeit": "Durchblick",
+    "faehigkeitText": "Zu Beginn jedes Levels sind zwei Karten für eine Sekunde sichtbar.",
+    "freigeschaltet": true
+  },
+  { "id": "spinne", "name": "Spinne", "bild": "🕷️", "seltenheit": "Gewöhnlich", "fundort": "Level 2", "beschreibung": "Webt ihre Netze zwischen den Karten.", "faehigkeit": "Netz", "faehigkeitText": "Eine Karte bleibt nach einem Fehler länger offen.", "freigeschaltet": false },
+  { "id": "ratte", "name": "Ratte", "bild": "🐀", "seltenheit": "Gewöhnlich", "fundort": "Level 1", "beschreibung": "Huscht durch die Vorratskammern.", "faehigkeit": "Sammler", "faehigkeitText": "Mehr Gold pro gefundenem Paar.", "freigeschaltet": false },
+  { "id": "zombie", "name": "Zombie", "bild": "🧟", "seltenheit": "Gewöhnlich", "fundort": "Level 3", "beschreibung": "Langsam, aber unermüdlich.", "faehigkeit": "Zähigkeit", "faehigkeitText": "+1 Leben zu Beginn jedes Runs.", "freigeschaltet": false },
+  { "id": "goblin", "name": "Goblin", "bild": "👺", "seltenheit": "Selten", "fundort": "Level 4", "beschreibung": "Gierig und hinterlistig.", "faehigkeit": "Diebstahl", "faehigkeitText": "Ein gefundenes Paar zählt doppelt.", "freigeschaltet": false },
+  { "id": "schlange", "name": "Schlange", "bild": "🐍", "seltenheit": "Selten", "fundort": "Level 4", "beschreibung": "Lauert zwischen den Steinen.", "faehigkeit": "Häutung", "faehigkeitText": "Einmal pro Run ein Leben zurück.", "freigeschaltet": false },
+  { "id": "golem", "name": "Golem", "bild": "🗿", "seltenheit": "Selten", "fundort": "Level 5", "beschreibung": "Ein Wächter aus lebendem Stein.", "faehigkeit": "Steinhaut", "faehigkeitText": "Fehler kosten im ersten Level kein Leben.", "freigeschaltet": false },
+  { "id": "vampir", "name": "Vampir", "bild": "🧛", "seltenheit": "Episch", "fundort": "Level 6", "beschreibung": "Meidet das Licht der Kerzen.", "faehigkeit": "Blutdurst", "faehigkeitText": "Jedes dritte Paar gibt ein Leben zurück.", "freigeschaltet": false },
+  { "id": "mumie", "name": "Mumie", "bild": "🧻", "seltenheit": "Selten", "fundort": "Level 5", "beschreibung": "Seit Jahrhunderten eingewickelt.", "faehigkeit": "Verband", "faehigkeitText": "Heilt ein Leben nach jedem Level.", "freigeschaltet": false },
+  { "id": "hexe", "name": "Hexe", "bild": "🧙", "seltenheit": "Episch", "fundort": "Level 7", "beschreibung": "Braut Tränke aus Erinnerungen.", "faehigkeit": "Zauberblick", "faehigkeitText": "Alle Karten sind zu Beginn kurz sichtbar.", "freigeschaltet": false },
+  { "id": "wolf", "name": "Wolf", "bild": "🐺", "seltenheit": "Selten", "fundort": "Level 6", "beschreibung": "Jagt im Rudel durch die Gänge.", "faehigkeit": "Rudel", "faehigkeitText": "Zwei Paare hintereinander geben Bonusgold.", "freigeschaltet": false },
+  { "id": "oger", "name": "Oger", "bild": "👹", "seltenheit": "Episch", "fundort": "Level 8", "beschreibung": "Groß, laut und hungrig.", "faehigkeit": "Brecher", "faehigkeitText": "Entfernt ein Kartenpaar zu Beginn.", "freigeschaltet": false },
+  { "id": "kraken", "name": "Kraken", "bild": "🐙", "seltenheit": "Episch", "fundort": "Level 8", "beschreibung": "Haust in den überfluteten Kellern.", "faehigkeit": "Tentakel", "faehigkeitText": "Drei Karten auf einmal aufdecken, einmal pro Level.", "freigeschaltet": false },
+  { "id": "daemon", "name": "Dämon", "bild": "😈", "seltenheit": "Legendär", "fundort": "Level 9", "beschreibung": "Ein Wesen aus den tiefsten Ebenen.", "faehigkeit": "Pakt", "faehigkeitText": "Doppeltes Gold, aber ein Leben weniger.", "freigeschaltet": false },
+  { "id": "drache", "name": "Drache", "bild": "🐉", "seltenheit": "Legendär", "fundort": "Level 10", "beschreibung": "Bewacht den Schatz am Ende des Dungeons.", "faehigkeit": "Feueratem", "faehigkeitText": "Deckt alle Karten einer Reihe kurz auf.", "freigeschaltet": false },
+  { "id": "phoenix", "name": "Phönix", "bild": "🐦‍🔥", "seltenheit": "Legendär", "fundort": "Level 10", "beschreibung": "Steigt aus der eigenen Asche empor.", "faehigkeit": "Wiedergeburt", "faehigkeitText": "Einmal pro Run nach Game Over weiterspielen.", "freigeschaltet": false },
+  { "id": "lich", "name": "Lich", "bild": "☠️", "seltenheit": "Legendär", "fundort": "Level 10", "beschreibung": "Der Herrscher über alle Untoten.", "faehigkeit": "Unsterblich", "faehigkeitText": "Fehler kosten für 10 Sekunden kein Leben.", "freigeschaltet": false }
+]
