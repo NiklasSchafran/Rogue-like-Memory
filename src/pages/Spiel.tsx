@@ -4,7 +4,7 @@ import type { Karte } from '../types'
 
 const SYMBOLE = ['🍎', '🍌', '🍇', '🍒', '🥝', '🍔', '🍕', '🍦']
 
-function mischen<T>(array: T[]): T[] {
+function mischen(array: string[]): string[] {
   const kopie = [...array]
   for (let i = kopie.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
