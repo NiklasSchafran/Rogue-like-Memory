@@ -9,3 +9,9 @@ export type Monster = {
   faehigkeitText: string
   freigeschaltet: boolean
 }
+
+export type Karte = {
+  id: number
+  symbol: string
+  status: 'verdeckt' | 'offen' | 'gefunden'
+}
